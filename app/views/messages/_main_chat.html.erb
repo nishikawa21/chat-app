@@ -10,25 +10,7 @@
 </div>
 
 <div class="messages">
-  <div class="contents">
-    <div class="top-contents">
-     <div class="user">Tom</div>
-     <div class="date">2020/3/31(Wed) 12:43:30</div>
-    </div>
-    <div class="lower-content">
-      <div class="message">おはよう</div>
-    </div>
-  </div>
-
-  <div class="contents">
-    <div class="top-contents">
-     <div class="user">Tom</div>
-     <div class="date">2020/3/31(Wed) 12:43:30</div>
-    </div>
-    <div class="lower-content">
-      <div class="message">おはよう</div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
